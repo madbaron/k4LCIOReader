@@ -430,7 +430,7 @@ podio::CollectionBase *k4LCIOConverter::cnvTrackCollection(EVENT::LCCollection *
         // add Sub-detector numbers
         for (auto v : rval->getSubdetectorHitNumbers())
         {
-#if EDM4HEP_BUILD_VERSION > EDM4HEP_VERSION(0, 9, 0)
+#if EDM4HEP_BUILD_VERSION >= EDM4HEP_VERSION(0, 9, 0)
             lval.addToSubdetectorHitNumbers(v);
 #else
             lval.addToSubDetectorHitNumbers(v);
